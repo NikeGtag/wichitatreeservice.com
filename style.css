@@ -1,59 +1,22 @@
-/* assets/css/style.css – NUCLEAR DARK MODE (overrides everything) */
-*,
-*::before,
-*::after {
+/* NUCLEAR DARK MODE – nothing survives */
+*, *::before, *::after {
   background-color: #0f172a !important;
   color: #e2e8f0 !important;
   border-color: #334155 !important;
 }
 
-/* Force every Tailwind background to dark */
-.bg-white,
-.bg-gray-50,
-.bg-gray-100,
-.bg-gray-200 { background-color: #1e293b !important; }
+.bg-white, .bg-gray-50, .bg-gray-100, .bg-gray-200 { background-color: #1e293b !important; }
+.text-gray-800, .text-gray-900, .text-black, .text-green-900 { color: #e2e8f0 !important; }
+.text-gray-600, .text-gray-500 { color: #94a3b8 !important; }
 
-/* Force text colors */
-.text-gray-800,
-.text-gray-900,
-.text-black,
-.text-green-900 { color: #e2e8f0 !important; }
+.hero-gradient { background: linear-gradient(135deg, #166534, #0f172a) !important; }
 
-.text-gray-600 { color: #94a3b8 !important; }
+.card, input, textarea, select, form { background-color: #1e293b !important; border: 1px solid #334155 !important; }
 
-/* Hero gradient – richer dark green → black */
-.hero-gradient { 
-  background: linear-gradient(135deg, #166534, #0f172a) !important; 
-}
-
-/* Cards & forms */
-.card,
-input,
-textarea,
-select {
-  background-color: #1e293b !important;
-  border: 1px solid #334155 !important;
-}
-
-/* Lime buttons stay bright */
-.btn-primary,
-.bg-lime-500,
-button[type="submit"] {
+.btn-primary, [class*="bg-lime"], button[type="submit"] {
   background-color: #84cc16 !important;
   color: #000 !important;
 }
-.btn-primary:hover,
-.bg-lime-500:hover {
-  background-color: #a3e635 !important;
-}
+.btn-primary:hover, [class*="bg-lime"]:hover { background-color: #a3e635 !important; }
 
-/* Footer & body */
-html, body, footer { 
-  background: #0f172a !important; 
-  color: #e2e8f0 !important;
-}
-
-/* Kill any leftover light */
-div, section, header, main, nav { 
-  background: transparent !important; 
-}
+html, body, footer, section, div { background: #0f172a !important; }

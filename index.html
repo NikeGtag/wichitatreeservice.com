@@ -5,107 +5,146 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Wichita Tree Service | 24/7 Tree Removal & Trimming</title>
   <meta name="description" content="Emergency tree service in Wichita, KS. Same-day removal, trimming, stump grinding. Call (316) 555-TREE" />
- 
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;900&display=swap" rel="stylesheet">
-  
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
   <style>
-    body { font-family: 'Inter', sans-serif; background: #0f172a; color: #e2e8f0; }
-    
-    /* NUCLEAR DARK MODE – baked in, no escape */
-    .hero-gradient {
-      background: linear-gradient(135deg, #166534, #0f172a);
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #000;
+      color: #84cc16;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
     }
-    .btn-primary {
-      background-color: #84cc16;
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; }
+
+    /* HERO – pure toxic green on black */
+    .hero {
+      background: linear-gradient(135deg, #000, #166534);
+      padding: 6rem 0;
+      text-align: center;
+    }
+    h1 {
+      font-size: 5rem;
+      font-weight: 900;
+      line-height: 1;
+      margin-bottom: 1rem;
+      text-transform: uppercase;
+    }
+    @media (min-width: 768px) { h1 { font-size: 7rem; } }
+    .lime { color: #84cc16; }
+
+    .btn {
+      display: inline-block;
+      background: #84cc16;
       color: #000;
       font-weight: 900;
+      font-size: 1.8rem;
+      padding: 1.2rem 3rem;
+      border-radius: 0.75rem;
+      text-decoration: none;
+      margin: 1rem;
       transition: all 0.3s ease;
     }
-    .btn-primary:hover {
-      background-color: #a3e635;
-      transform: scale(1.05);
+    .btn:hover {
+      background: #a3e635;
+      transform: scale(1.08);
+    }
+    .btn-outline {
+      background: transparent;
+      border: 3px solid #84cc16;
+      color: #84cc16;
+    }
+    .btn-outline:hover {
+      background: #84cc16;
+      color: #000;
+    }
+
+    /* SERVICES */
+    .services {
+      padding: 6rem 0;
+      text-align: center;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+      margin: 3rem auto;
+      max-width: 1000px;
     }
     .card {
-      background-color: #1e293b;
-      border: 1px solid #334155;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-      transition: transform 0.3s ease;
+      background: #111;
+      border: 2px solid #84cc16;
+      padding: 3rem 2rem;
+      border-radius: 1rem;
+      transition: transform 0.3s;
     }
-    .card:hover {
-      transform: translateY(-10px);
+    .card:hover { transform: translateY(-15px); }
+    .card h3 { font-size: 2rem; margin-bottom: 1rem; }
+
+    /* CTA */
+    .cta {
+      background: #166534;
+      padding: 6rem 0;
+      text-align: center;
     }
-    
-    /* Force everything into the void */
-    *, *::before, *::after {
-      background-color: #0f172a !important;
-      color: #e2e8f0 !important;
-      border-color: #334155 !important;
-    }
-    .bg-white, [class*="bg-gray"], [class*="bg-lime"] { background-color: #0f172a !important; }
-    section, footer, div { background: transparent !important; }
-    
-    /* Preserve the radioactive lime */
-    .text-[#84cc16], .hover\:text-black:hover { color: #84cc16 !important; }
-    a.border-[#84cc16] { border-color: #84cc16 !important; color: #84cc16 !important; }
-    a.border-[#84cc16]:hover {
-      background-color: #84cc16 !important;
-      color: #000 !important;
+
+    /* FOOTER */
+    footer {
+      background: #000;
+      color: #555;
+      text-align: center;
+      padding: 2rem 0;
+      font-size: 0.9rem;
     }
   </style>
 </head>
-<body class="min-h-screen flex flex-col">
-  <section class="hero-gradient text-white py-32 text-center">
-    <div class="container mx-auto px-6">
-      <h1 class="text-6xl md:text-8xl font-black mb-4 leading-tight">
-        WICHITA<br><span class="text-[#84cc16]">TREE SERVICE</span>
-      </h1>
-      <p class="text-2xl mb-10">24/7 Emergency • Free Estimates • Fully Insured</p>
-      <div class="space-x-6">
-        <a href="tel:3165558733" class="btn-primary inline-block text-2xl px-12 py-6 rounded-lg shadow-2xl">
-          (316) 555-TREE
-        </a>
-        <a href="/contact.html" class="border-2 border-[#84cc16] text-[#84cc16] font-bold text-2xl px-12 py-6 rounded-lg hover:bg-[#84cc16] hover:text-black transition">
-          Free Quote
-        </a>
+<body>
+
+  <section class="hero">
+    <div class="container">
+      <h1>Wichita<br><span class="lime">Tree Service</span></h1>
+      <p style="font-size:1.8rem; margin:2rem 0;">24/7 Emergency • Free Estimates • Fully Insured</p>
+      <div>
+        <a href="tel:3165558733" class="btn">Call (316) 555-TREE</a>
+        <a href="/contact.html" class="btn btn-outline">Free Quote</a>
       </div>
     </div>
   </section>
 
-  <section class="py-20">
-    <div class="container mx-auto px-6 text-center">
-      <h2 class="text-5xl font-black mb-16">Our Services</h2>
-      <div class="grid md:grid-cols-3 gap-10 max-w-5xl mx-auto">
-        <div class="card p-10 rounded-2xl text-center">
-          <h3 class="text-3xl font-bold mb-4">Tree Removal</h3>
-          <p class="text-lg">Safe, fast, clean</p>
+  <section class="services">
+    <div class="container">
+      <h2 style="font-size:4rem; font-weight:900; margin-bottom:3rem;">Our Services</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>Tree Removal</h3>
+          <p>Safe, fast, clean</p>
         </div>
-        <div class="card p-10 rounded-2xl text-center">
-          <h3 class="text-3xl font-bold mb-4">Trimming & Pruning</h3>
-          <p class="text-lg">ISA-certified work</p>
+        <div class="card">
+          <h3>Trimming & Pruning</h3>
+          <p>ISA-certified work</p>
         </div>
-        <div class="card p-10 rounded-2xl text-center">
-          <h3 class="text-3xl font-bold mb-4">Stump Grinding</h3>
-          <p class="text-lg">Below grade, gone forever</p>
+        <div class="card">
+          <h3>Stump Grinding</h3>
+          <p>Below grade, gone forever</p>
         </div>
       </div>
-      <a href="/services.html" class="inline-block mt-12 text-[#84cc16] font-bold text-xl hover:underline">
-        All Services →
-      </a>
+      <a href="/services.html" style="color:#84cc16; font-size:1.4rem; font-weight:bold;">All Services →</a>
     </div>
   </section>
 
-  <section class="bg-[#166534] py-20 text-center">
-    <div class="container mx-auto px-6">
-      <h2 class="text-5xl font-black mb-8 text-white">Need Help Today?</h2>
-      <a href="tel:3165558733" class="btn-primary text-3xl font-black px-16 py-8 rounded-lg shadow-2xl inline-block">
+  <section class="cta">
+    <div class="container">
+      <h2 style="font-size:4rem; font-weight:900; margin-bottom:2rem; color:#fff;">Need Help Today?</h2>
+      <a href="tel:3165558733" class="btn" style="font-size:2.5rem; padding:1.5rem 4rem;">
         (316) 555-TREE – Same-Day Available
       </a>
     </div>
   </section>
 
-  <footer class="py-12 text-center text-gray-500 text-sm">
+  <footer>
     © 2025 Wichita Tree Service • Serving Wichita, Derby, Andover, Maize & Surrounding Areas
   </footer>
+
 </body>
 </html>

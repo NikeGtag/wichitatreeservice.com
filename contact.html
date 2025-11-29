@@ -3,30 +3,132 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Contact – Free Quote</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="/assets/css/style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;900&display=swap" rel="stylesheet">
-  <style>body{font-family:'Inter',sans-serif;}</style>
+  <title>Contact – Free Quote | Wichita Tree Service</title>
+  <meta name="description" content="Get your free tree service quote in 15 minutes or less. 24/7 emergency response." />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+  
+  <style>
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #000;
+      color: #84cc16;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; }
+
+    /* HERO */
+    .hero {
+      background: linear-gradient(135deg, #000, #166534);
+      padding: 6rem 0;
+      text-align: center;
+    }
+    h1 {
+      font-size: 4.5rem;
+      font-weight: 900;
+      text-transform: uppercase;
+      line-height: 1;
+    }
+    @media (min-width: 768px) { h1 { font-size: 6rem; } }
+
+    /* FORM */
+    .form-wrapper {
+      padding: 5rem 0;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    input, textarea, select {
+      width: 100%;
+      background: #111;
+      border: 3px solid #84cc16;
+      color: #84cc16;
+      padding: 1.4rem 1.6rem;
+      border-radius: 0.75rem;
+      font-size: 1.2rem;
+      margin-bottom: 1.5rem;
+      font-family: inherit;
+    }
+    input::placeholder, textarea::placeholder {
+      color: #444;
+    }
+    textarea { min-height: 180px; resize: vertical; }
+
+    /* SUBMIT BUTTON */
+    .submit-btn {
+      display: block;
+      width: 100%;
+      background: #84cc16;
+      color: #000;
+      font-weight: 900;
+      font-size: 2rem;
+      padding: 1.6rem;
+      border-radius: 0.75rem;
+      border: none;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      text-transform: uppercase;
+    }
+    .submit-btn:hover {
+      background: #a3e635;
+      transform: scale(1.04);
+    }
+
+    footer {
+      background: #000;
+      color: #444;
+      text-align: center;
+      padding: 2.5rem 0;
+      font-size: 0.95rem;
+      margin-top: auto;
+    }
+  </style>
 </head>
 <body>
-  <section class="hero-gradient text-white py-24 text-center">
-    <div class="container mx-auto px-6">
-      <h1 class="text-6xl font-black">Get Your Free Quote</h1>
-      <p class="text-xl mt-4">We answer in 15 minutes or less</p>
+
+  <section class="hero">
+    <div class="container">
+      <h1>Get Your Free Quote</h1>
+      <p style="font-size:2rem; margin-top:1.5rem; color:#aaa;">
+        We answer in <span style="color:#84cc16; font-weight:900;">15 minutes or less</span> — 24/7
+      </p>
     </div>
   </section>
 
-  <section class="py-20 container mx-auto px-6 max-w-2xl">
-    <form action="https://formspree.io/f/YOUR_EMAIL_HERE" method="POST" class="card p-10 rounded-2xl space-y-6">
-      <input type="text" name="name" placeholder="Name" required class="w-full p-5 rounded-lg text-lg">
-      <input type="tel" name="phone" placeholder="Phone (required)" required class="w-full p-5 rounded-lg text-lg">
-      <input type="email" name="email" placeholder="Email (optional)" class="w-full p-5 rounded-lg text-lg">
-      <textarea name="message" rows="6" placeholder="Describe the job..." required class="w-full p-5 rounded-lg text-lg"></textarea>
-      <button type="submit" class="w-full btn-primary font-black text-2xl py-6 rounded-lg">SEND – WE'LL CALL YOU IN 15 MIN</button>
-    </form>
+  <section class="form-wrapper">
+    <div class="container">
+
+      <form action="https://formspree.io/f/your-email-here" method="POST">
+        
+        <input type="text" name="name" placeholder="Your Name" required />
+        
+        <input type="tel" name="phone" placeholder="Phone Number (required)" required />
+        
+        <input type="email" name="email" placeholder="Email (optional)" />
+        
+        <select name="service" required style="margin-bottom:1.5rem;">
+          <option value="" disabled selected>Service Needed</option>
+          <option>Emergency Tree Removal</option>
+          <option>Trimming / Pruning</option>
+          <option>Stump Grinding</option>
+          <option>Storm Damage</option>
+          <option>Other</option>
+        </select>
+        
+        <textarea name="message" placeholder="Describe the job (address, tree size, urgency, etc.)" required></textarea>
+        
+        <button type="submit" class="submit-btn">
+          SEND — WE’LL CALL YOU IN 15 MIN
+        </button>
+      </form>
+
+    </div>
   </section>
-  <!-- same footer -->
-  <footer class="py-12 text-center text-gray-500">© 2025 Wichita Tree Service • (316) 555-TREE</footer>
+
+  <footer>
+    © 2025 Wichita Tree Service • (316) 555-TREE • Serving Wichita & Surrounding Areas
+  </footer>
+
 </body>
 </html>

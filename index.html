@@ -19,16 +19,11 @@
     .btn-outline:hover{background:#84cc16;color:#000;}
     section{padding:6rem 0;text-align:center;}
     .services{background:#000;}
-    .contact{background:#000;border-top:4px solid #84cc16;}
+    .contact{background:#000;border-top:4px solid #84cc16;padding:7rem 0;}
     .cta{background:#166534;}
     .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:2.5rem;max-width:1000px;margin:3rem auto;}
     .card{background:#111;border:2px solid #84cc16;padding:3rem 2rem;border-radius:1rem;transition:transform .4s;}
     .card:hover{transform:translateY(-20px);}
-    input,textarea,select{width:100%;background:#111;border:3px solid #84cc16;color:#84cc16;padding:1.4rem 1.6rem;border-radius:0.75rem;font-size:1.2rem;margin-bottom:1.5rem;font-family:inherit;}
-    input::placeholder,textarea::placeholder{color:#444;}
-    textarea{min-height:180px;resize:vertical;}
-    .submit-btn{width:100%;background:#84cc16;color:#000;font-weight:900;font-size:2.2rem;padding:1.6rem;border:none;border-radius:0.75rem;cursor:pointer;transition:all .3s;text-transform:uppercase;}
-    .submit-btn:hover{background:#a3e635;transform:scale(1.04);}
     footer{background:#000;color:#444;padding:2.5rem 0;font-size:0.95rem;text-align:center;margin-top:auto;}
   </style>
 </head>
@@ -40,7 +35,7 @@
       <p style="font-size:2.2rem;margin:2rem 0;">24/7 Emergency • Free Estimates • Fully Insured</p>
       <div>
         <a href="tel:+13166168321" class="btn">Call (316) 616-8321</a>
-        <a href="#contact" class="btn btn-outline">Get Free Quote</a>
+        <a href="tel:+13166168321" class="btn btn-outline">Tap To Talk Now</a>
       </div>
     </div>
   </section>
@@ -56,50 +51,33 @@
     </div>
   </section>
 
+  <!-- NEW “CONTACT” SECTION – NO FORM, NO WARNINGS, JUST PHONE -->
   <section id="contact" class="contact">
     <div class="container">
-      <h2 style="font-size:4.5rem;font-weight:900;margin-bottom:1rem;">Get Your Free Quote</h2>
-      <p style="font-size:1.6rem;color:#aaa;margin-bottom:3rem;">
-        We answer <span style="color:#84cc16;font-weight:900;">15 minutes or less</span> — 24/7
+      <h2 style="font-size:4.5rem;font-weight:900;">Need a Free Quote?</h2>
+      <p style="font-size:2rem;color:#aaa;margin:2rem 0;">
+        Tap below and we answer <span style="color:#84cc16;font-weight:900;">in 15 minutes or less — 24/7</span>
       </p>
-
-      <!-- 100% working without any third-party service -->
-      <form action="mailto:yourrealemail@gmail.com" method="post" enctype="text/plain" 
-            onsubmit="this.action='mailto:yourrealemail@gmail.com?subject=Tree%20Job%20Quote%20-%20(316)%20'+document.getElementById('phone').value;'">
-        <input type="text" name="name" placeholder="Your Name" required />
-        <input id="phone" type="tel" name="phone" placeholder="Phone Number (required)" required />
-        <input type="email" name="email" placeholder="Email (optional)" />
-        <select name="service" required>
-          <option value="" disabled selected>Service Needed</option>
-          <option>Emergency Removal</option>
-          <option>Trimming / Pruning</option>
-          <option>Stump Grinding</option>
-          <option>Storm Damage</option>
-          <option>Other</option>
-        </select>
-        <textarea name="message" placeholder="Address, tree size, urgency — tell us everything..." required></textarea>
-        <button type="submit" class="submit-btn">
-          SEND — WE'LL CALL YOU IN 15 MIN
-        </button>
-      </form>
-
-      <p style="margin-top:2rem;font-size:1.3rem;color:#666;">
-        Or just call us now → <a href="tel:+13166168321" style="color:#84cc16;font-weight:900;">(316) 616-8321</a>
+      <a href="tel:+13166168321" class="btn" style="font-size:3rem;padding:2rem 6rem;display:inline-block;margin:2rem;">
+        CALL (316) 616-8321 NOW
+      </a>
+      <p style="font-size:1.4rem;color:#666;margin-top:3rem;">
+        No forms. No waiting. Just real people ready to help.
       </p>
     </div>
   </section>
 
   <section class="cta">
     <div class="container">
-      <h2 style="font-size:4.5rem;font-weight:900;color:#fff;">Need it Gone TODAY?</h2>
-      <a href="tel:+13166168321" class="btn" style="font-size:2.8rem;padding:1.8rem 5rem;margin-top:2rem;">
+      <h2 style="font-size:4.8rem;font-weight:900;color:#fff;">Tree Down? Storm Damage?</h2>
+      <a href="tel:+13166168321" class="btn" style="font-size:3.2rem;padding:2rem 6rem;margin-top:2rem;">
         (316) 616-8321 – CALL NOW
       </a>
     </div>
   </section>
 
   <footer>
-    © 2025 Wichita Tree Service • <a href="tel:+13166168321" style="color:#84cc16;">(316) 616-8321</a> • Wichita & Surrounding Areas
+    © 2025 Wichita Tree Service • <a href="tel:+13166168321" style="color:#84cc16;">(316) 616-8321</a> • Wichita, Derby, Andover, Maize & surrounding areas
   </footer>
 
 </body>

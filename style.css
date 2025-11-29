@@ -1,1 +1,83 @@
+/* assets/css/style.css – Dark Mode Master */
 
+/* 1. Force dark mode + high contrast for outdoor workers on phones */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0f172a;        /* almost black */
+    --surface: #1e293b;    /* cards, footer */
+    --text: #e2e8f0;       /* light gray */
+    --text-muted: #94a3b8;
+    --primary: #84cc16;    /* lime green accent */
+    --primary-dark: #65a30d;
+    --green-dark: #22543d;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --bg: #f8fafc;
+    --surface: #ffffff;
+    --text: #1e293b;
+    --text-muted: #64748b;
+    --primary: #84cc16;
+    --primary-dark: #65a30d;
+    --green-dark: #22543d;
+  }
+}
+
+/* 2. Always force dark mode on your site (remove the light block above if you want 100% forced dark) */
+:root {
+  --bg: #0f172a;
+  --surface: #1e293b;
+  --text: #e2e8f0;
+  --text-muted: #94a3b8;
+  --primary: #84cc16;
+  --primary-dark: #65a30d;
+  --green-dark: #22543d;
+}
+
+/* 3. Apply the variables */
+body {
+  background-color: var(--bg) !important;
+  color: var(--text) !important;
+}
+
+/* Hero background – richer dark gradient */
+.bg-gradient-to-br\/from-green-900\/to-black {
+  background: linear-gradient(to bottom right, #166534, #0f172a) !important;
+}
+
+/* Cards & sections */
+.bg-gray-50,
+.bg-white {
+  background-color: var(--surface) !important;
+  color: var(--text) !important;
+}
+
+/* Text colors */
+.text-gray-800,
+.text-green-800,
+.text-black {
+  color: var(--text) !important;
+}
+
+.text-white {
+  color: #ffffff !important;
+}
+
+/* Buttons – keep the lime pop */
+.bg-lime-500 { background-color: var(--primary) !important; }
+.hover\:bg-lime-400:hover { background-color: #a3e635 !important; }
+.text-black { color: #0f172a !important; }
+
+/* Footer */
+footer {
+  background-color: #0f172a !important;
+}
+
+/* Optional: subtle border glow on cards for extra depth */
+.bg-white,
+[class*="shadow-lg"] {
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.5), 0 10px 10px -5px rgba(0, 0, 0, 0.4) !important;
+  border: 1px solid rgba(148, 163, 184, 0.1);
+}

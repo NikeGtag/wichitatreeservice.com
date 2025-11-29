@@ -3,92 +3,76 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Wichita Tree Service | 24/7 Emergency Removal</title>
-  <meta name="description" content="Wichita’s only Board Certified Master Arborist – Call (316) 616-8321" />
+  <title>Wichita Tree Service | (316) 616-8321 | 24/7 Emergency</title>
+  <meta name="description" content="Wichita’s only Board Certified Master Arborist – Same-day service" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
   <style>
     *{margin:0;padding:0;box-sizing:border-box;}
     body{font-family:'Inter',sans-serif;background:#000;color:#84cc16;min-height:100vh;display:flex;flex-direction:column;}
-    .container{max-width:1200px;margin:0 auto;padding:0 1.5rem;}
     
-    /* HERO */
-    .hero{background:linear-gradient(135deg,#000,#166534);padding:8rem 0 4rem;text-align:center;}
+    /* GALLERY HERO HEADER – your truck dominates the top of the page */
+    .header-gallery{
+      position:relative;
+      height:90vh;
+      min-height:600px;
+      background:url('https://wichita-treeservice.com/wp-content/uploads/2023/07/First-truck.webp') center center/cover no-repeat;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      text-align:center;
+      border-bottom:8px solid #84cc16;
+      box-shadow:0 0 60px rgba(132,204,22,0.7);
+    }
+    .header-overlay{
+      position:absolute;
+      top:0; left:0; right:0; bottom:0;
+      background:rgba(0,0,0,0.75);
+    }
+    .header-content{
+      position:relative;
+      z-index:2;
+      padding:2rem;
+    }
     h1{font-size:5.5rem;font-weight:900;line-height:0.9;text-transform:uppercase;}
-    @media(min-width:768px){h1{font-size:8.5rem;}}
-    .btn{display:inline-block;background:#84cc16;color:#000;font-weight:900;font-size:1.9rem;padding:1.3rem 3.5rem;border-radius:0.75rem;text-decoration:none;margin:0.8rem;transition:all .3s;}
-    .btn:hover{background:#a3e635;transform:scale(1.08);}
-    .btn-outline{background:transparent;border:3px solid #84cc16;color:#84cc16;}
-    .btn-outline:hover{background:#84cc16;color:#000;}
+    @media(min-width:768px){h1{font-size:9rem;}}
+    .btn{
+      display:inline-block;background:#84cc16;color:#000;font-weight:900;
+      font-size:2.2rem;padding:1.4rem 4rem;border-radius:0.75rem;text-decoration:none;
+      margin:2rem 1rem;transition:all .4s;box-shadow:0 0 30px rgba(132,204,22,0.8);
+    }
+    .btn:hover{background:#a3e635;transform:scale(1.1);}
     
-    /* GALLERY HEADER – full showcase right at the top */
-    .gallery-header{
-      background:#000;
-      padding:4rem 0;
-      border-bottom:6px solid #84cc16;
-    }
-    .gallery-grid{
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(340px,1fr));
-      gap:1.5rem;
-      max-width:1400px;
-      margin:0 auto;
-      padding:0 1.5rem;
-    }
-    .gallery-item{
-      border:5px solid #84cc16;
-      border-radius:1.2rem;
-      overflow:hidden;
-      box-shadow:0 0 50px rgba(132,204,22,0.6);
-      transition:transform .4s;
-    }
-    .gallery-item:hover{transform:scale(1.06);}
-    .gallery-item img{width:100%;height:auto;display:block;}
-
-    /* ABOUT US – right after gallery */
-    .about{background:#000;padding:7rem 0;border-top:4px solid #84cc16;}
+    /* Rest of the page */
+    .container{max-width:1200px;margin:0 auto;padding:0 1.5rem;}
+    section{padding:7rem 0;text-align:center;}
+    .about,.services,.contact{border-top:5px solid #84cc16;}
     .about-text{max-width:900px;margin:0 auto;line-height:1.9;font-size:1.3rem;color:#e2e8f0;}
     .about-text p{margin-bottom:1.8rem;}
-    .signature{font-size:2.2rem;color:#84cc16;font-weight:900;margin-top:4rem;}
-
-    /* REST OF SECTIONS */
-    section{padding:6rem 0;text-align:center;}
-    .services,.contact{border-top:4px solid #84cc16;padding-top:7rem;}
-    .cta{background:#166534;}
+    .signature{font-size:2.4rem;color:#84cc16;font-weight:900;margin-top:4rem;}
     .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:2.5rem;max-width:1000px;margin:3rem auto;}
     .card{background:#111;border:2px solid #84cc16;padding:3rem 2rem;border-radius:1rem;transition:transform .4s;}
     .card:hover{transform:translateY(-20px);}
-    footer{background:#000;color:#444;padding:2.5rem 0;font-size:0.95rem;text-align:center;margin-top:auto;}
+    .cta{background:#166534;padding:8rem 0;}
+    footer{background:#000;color:#444;padding:3rem 0;font-size:0.95rem;margin-top:auto;}
   </style>
 </head>
 <body>
 
-  <!-- HERO -->
-  <section class="hero">
-    <div class="container">
-      <h1>Wichita<br><span style="color:#84cc16;">Tree Service</span></h1>
-      <p style="font-size:2.2rem;margin:2rem 0;">24/7 Emergency • Free Estimates • Fully Insured</p>
+  <!-- GALLERY HEADER – your truck is now the star of the show -->
+  <header class="header-gallery">
+    <div class="header-overlay"></div>
+    <div class="header-content">
+      <h1>WICHITA<br><span style="color:#84cc16;">TREE SERVICE</span></h1>
+      <p style="font-size:2.4rem;margin:1.5rem 0;color:#fff;">
+        24/7 Emergency • Free Estimates • Fully Insured
+      </p>
       <div>
-        <a href="tel:+13166168321" class="btn">Call (316) 616-8321</a>
-        <a href="tel:+13166168321" class="btn btn-outline">Tap To Talk Now</a>
+        <a href="tel:+13166168321" class="btn">CALL (316) 616-8321</a>
       </div>
     </div>
-  </section>
+  </header>
 
-  <!-- GALLERY HEADER – now at the very top after hero -->
-  <section class="gallery-header">
-    <div class="gallery-grid">
-      <div class="gallery-item">
-        <img src="https://wichita-treeservice.com/wp-content/uploads/2023/07/First-truck.webp"
-             alt="Wichita Tree Service – First truck loaded and ready" loading="lazy">
-      </div>
-      <!-- Add more photos here anytime -->
-      <!--
-      <div class="gallery-item"><img src="https://wichita-treeservice.com/wp-content/uploads/2024/xx/job2.webp" alt="Big job"></div>
-      -->
-    </div>
-  </section>
-
-  <!-- ABOUT US – Robert’s full story, right up high -->
+  <!-- ABOUT US – right after the header -->
   <section class="about" id="about">
     <div class="container">
       <h2 style="font-size:4.8rem;font-weight:900;margin-bottom:2rem;">About Us</h2>
@@ -101,7 +85,7 @@
         <p>Throughout this journey, I have gained invaluable knowledge and experiences. Initially, I believed that simply doing things the right way was the key to success, but I soon realized that it requires unwavering dedication and hard work. Most importantly, it necessitates the support of people who believe in you and what you do. Our company wouldn’t be where it is today without the incredible individuals who have helped us along the way—our loyal early customers who kept returning, investing their hard-earned money because they believed in us, as well as the employees and friends who have supported us throughout. I am forever grateful to all of them.</p>
         <div class="signature">
           – Robert Phillips<br>
-          <small style="font-size:1.1rem;color:#a3e635;">
+          <small style="font-size:1.2rem;color:#a3e635;">
             ISA Board Certified Master Arborist · Kansas Certified Arborist · TCIA Certified Tree Care Safety Professional · Tree Risk Assessment Qualified
           </small>
         </div>
@@ -128,7 +112,7 @@
       <p style="font-size:2rem;color:#aaa;margin:2rem 0;">
         Tap below — we answer <span style="color:#84cc16;font-weight:900;">in 15 minutes or less — 24/7</span>
       </p>
-      <a href="tel:+13166168321" class="btn" style="font-size:3rem;padding:2rem 6rem;display:inline-block;margin:2rem;">
+      <a href="tel:+13166168321" class="btn" style="font-size:3.2rem;padding:2rem 6rem;">
         CALL (316) 616-8321 NOW
       </a>
     </div>
@@ -137,8 +121,8 @@
   <!-- FINAL CTA -->
   <section class="cta">
     <div class="container">
-      <h2 style="font-size:4.8rem;font-weight:900;color:#fff;">Tree Down? Storm Damage?</h2>
-      <a href="tel:+13166168321" class="btn" style="font-size:3.2rem;padding:2rem 6rem;margin-top:2rem;">
+      <h2 style="font-size:5rem;font-weight:900;color:#fff;">Tree Down? Storm Damage?</h2>
+      <a href="tel:+13166168321" class="btn" style="font-size:3.5rem;padding:2.2rem 6rem;margin-top:2rem;">
         (316) 616-8321 – CALL NOW
       </a>
     </div>

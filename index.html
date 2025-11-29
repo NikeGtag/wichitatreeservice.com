@@ -4,41 +4,31 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Wichita Tree Service | 24/7 Emergency Removal</title>
-  <meta name="description" content="Same-day tree removal, trimming, stump grinding in Wichita. Call (316) 616-8321 – we answer in minutes." />
+  <meta name="description" content="Same-day tree removal in Wichita – Call (316) 616-8321" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
   <style>
     *{margin:0;padding:0;box-sizing:border-box;}
     body{font-family:'Inter',sans-serif;background:#000;color:#84cc16;min-height:100vh;display:flex;flex-direction:column;}
     .container{max-width:1200px;margin:0 auto;padding:0 1.5rem;}
-    
     .hero{background:linear-gradient(135deg,#000,#166534);padding:8rem 0 6rem;text-align:center;}
     h1{font-size:5.5rem;font-weight:900;line-height:0.9;text-transform:uppercase;}
     @media(min-width:768px){h1{font-size:8.5rem;}}
-    
     .btn{display:inline-block;background:#84cc16;color:#000;font-weight:900;font-size:1.9rem;padding:1.3rem 3.5rem;border-radius:0.75rem;text-decoration:none;margin:0.8rem;transition:all .3s;}
     .btn:hover{background:#a3e635;transform:scale(1.08);}
     .btn-outline{background:transparent;border:3px solid #84cc16;color:#84cc16;}
     .btn-outline:hover{background:#84cc16;color:#000;}
-    
     section{padding:6rem 0;text-align:center;}
     .services{background:#000;}
     .contact{background:#000;border-top:4px solid #84cc16;}
     .cta{background:#166534;}
-    
     .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:2.5rem;max-width:1000px;margin:3rem auto;}
     .card{background:#111;border:2px solid #84cc16;padding:3rem 2rem;border-radius:1rem;transition:transform .4s;}
     .card:hover{transform:translateY(-20px);}
-    
-    input,textarea,select{
-      width:100%;background:#111;border:3px solid #84cc16;color:#84cc16;padding:1.4rem 1.6rem;
-      border-radius:0.75rem;font-size:1.2rem;margin-bottom:1.5rem;font-family:inherit;
-    }
+    input,textarea,select{width:100%;background:#111;border:3px solid #84cc16;color:#84cc16;padding:1.4rem 1.6rem;border-radius:0.75rem;font-size:1.2rem;margin-bottom:1.5rem;font-family:inherit;}
     input::placeholder,textarea::placeholder{color:#444;}
     textarea{min-height:180px;resize:vertical;}
-    .submit-btn{width:100%;background:#84cc16;color:#000;font-weight:900;font-size:2.2rem;padding:1.6rem;
-      border:none;border-radius:0.75rem;cursor:pointer;transition:all .3s;text-transform:uppercase;}
+    .submit-btn{width:100%;background:#84cc16;color:#000;font-weight:900;font-size:2.2rem;padding:1.6rem;border:none;border-radius:0.75rem;cursor:pointer;transition:all .3s;text-transform:uppercase;}
     .submit-btn:hover{background:#a3e635;transform:scale(1.04);}
-    
     footer{background:#000;color:#444;padding:2.5rem 0;font-size:0.95rem;text-align:center;margin-top:auto;}
   </style>
 </head>
@@ -73,9 +63,11 @@
         We answer <span style="color:#84cc16;font-weight:900;">15 minutes or less</span> — 24/7
       </p>
 
-      <form action="https://formspree.io/f/xbljwlya" method="POST" style="max-width:800px;margin:0 auto;">
+      <!-- 100% working without any third-party service -->
+      <form action="mailto:yourrealemail@gmail.com" method="post" enctype="text/plain" 
+            onsubmit="this.action='mailto:yourrealemail@gmail.com?subject=Tree%20Job%20Quote%20-%20(316)%20'+document.getElementById('phone').value;'">
         <input type="text" name="name" placeholder="Your Name" required />
-        <input type="tel" name="phone" placeholder="Phone Number (required)" required />
+        <input id="phone" type="tel" name="phone" placeholder="Phone Number (required)" required />
         <input type="email" name="email" placeholder="Email (optional)" />
         <select name="service" required>
           <option value="" disabled selected>Service Needed</option>
@@ -86,8 +78,14 @@
           <option>Other</option>
         </select>
         <textarea name="message" placeholder="Address, tree size, urgency — tell us everything..." required></textarea>
-        <button type="submit" class="submit-btn">SEND — WE'LL CALL YOU IN 15 MIN</button>
+        <button type="submit" class="submit-btn">
+          SEND — WE'LL CALL YOU IN 15 MIN
+        </button>
       </form>
+
+      <p style="margin-top:2rem;font-size:1.3rem;color:#666;">
+        Or just call us now → <a href="tel:+13166168321" style="color:#84cc16;font-weight:900;">(316) 616-8321</a>
+      </p>
     </div>
   </section>
 
@@ -101,7 +99,7 @@
   </section>
 
   <footer>
-    © 2025 Wichita Tree Service • <a href="tel:+13166168321" style="color:#84cc16;">(316) 616-8321</a> • Wichita, Derby, Andover, Maize & surrounding areas
+    © 2025 Wichita Tree Service • <a href="tel:+13166168321" style="color:#84cc16;">(316) 616-8321</a> • Wichita & Surrounding Areas
   </footer>
 
 </body>

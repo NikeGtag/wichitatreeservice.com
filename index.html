@@ -43,6 +43,15 @@
     .testimonial-author{font-weight:700;color:#84cc16;}
     .testimonial-source{font-size:0.9rem;color:#aaa;}
     footer{background:#000;color:#444;padding:3rem 0;font-size:0.95rem;margin-top:auto;text-align:center;}
+
+    /* MOBILE-SPECIFIC ADJUSTMENTS */
+    @media(max-width:768px){
+      h1{font-size:4rem;}
+      .btn{font-size:1.8rem;padding:1rem 2.5rem;}
+      .about-text{font-size:1.1rem;line-height:1.6;}
+      .grid, .testimonials-grid{gap:1.5rem;}
+      .card, .testimonial-card{padding:1.5rem;}
+    }
   </style>
 </head>
 <body>
@@ -93,7 +102,7 @@
     </div>
   </section>
 
-  <!-- TESTIMONIALS – ALL 6 BACK AGAIN -->
+  <!-- TESTIMONIALS -->
   <section class="testimonials">
     <div class="container">
       <h2 style="font-size:4.5rem;font-weight:900;margin-bottom:3rem;">What Our Customers Say</h2>
@@ -151,7 +160,7 @@
     © 2025 Wichita Tree Service • <a href="tel:+13166168321" style="color:#84cc16;">(316) 616-8321</a> • Wichita & Surrounding Areas
   </footer>
 
-  <!-- SMOOTH SLIDER + SMOOTH SCROLL (perfect glide) -->
+  <!-- SMOOTH SLIDER + SMOOTH SCROLL + MOBILE DETECTION -->
   <script>
     const slides = document.querySelectorAll('.slides');
     let current = 0;
@@ -168,6 +177,15 @@
       e.preventDefault();
       document.getElementById('about').scrollIntoView({ behavior: 'smooth' });
     });
+
+    // MOBILE DETECTION (Optional: you can modify styles dynamically if needed)
+    function isMobile() {
+      return /Mobi|Android/i.test(navigator.userAgent);
+    }
+    if(isMobile()) {
+      document.body.style.fontSize = '1.1rem'; // small adjustment for phones
+      // You could add more mobile-specific JS adjustments here
+    }
   </script>
 </body>
 </html>

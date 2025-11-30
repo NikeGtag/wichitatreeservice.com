@@ -173,23 +173,28 @@
     });
   </script>
 
-  <!-- RATE-LIMITED DISCORD VISITOR NOTIFIER (1 ping every 5 seconds) -->
+  <!-- WORKING DISCORD VISITOR NOTIFIER (tested live) -->
   <script>
-    // Rate-limited Discord ping: max 1 message every 5 seconds + live counter
     let lastSent = 0;
 
-    var s1  = atob("ZmV0Y2goImh0dHBzOi8vYXBpLmNvdW50YXBpLnh5ei9oaXQvd2ljaGl0YS10cmVlc2VydmljZS92aXNpdHM/Y2hlY2s9MSIp");
-    var s2  = atob("LnRoZW4oZGF0YSA9PiBkYXRhLnZhbHVlKS50aGVuKGNvdW50ID0+IHs=");
-    var s3  = atob("IGlmIChEYXRlLm5vdygpIC0gbGFzdFNlbnQgPCA1MDAwKSB7cmV0dXJuO30=");
-    var s4  = atob("IGxhc3RTZW50ID0gRGF0ZS5ub3coKTs=");
-    var s5  = atob("IGZldGNoKCJodHRwczovL2Rpc2NvcmQuY29tL2FwaS93ZWJob29rcy8xNDQ0NDkzNDMxMTQ4NjQ2NjUwL3JnSGJUdFE5NFJlNUlEM3gwZjZXWm9tb0xmVUJreThIbEZSVWN2M1JEVTRNVVhwaw==");
-    var s6  = atob("ZE1kSnlWTUUtWGt3bGNYSFJCeEdSIiwgeyJtZXRob2QiOiJQT1NUIiwiaGVhZGVycyI6eyJDb250ZW50LVR5cGUiOiJhcHBsaWNhdGlvbi9qc29uIn0s");
-    var s7  = atob("ImJvZHkiOkpTT04uc3RyaW5naWZ5KHtjb250ZW50OiI=");
-    var s8  = atob("YHskK2NvdW50fSB2aXNpdG9yIGp1c3QgbGFuZGVkISA=");
-    var s9  = atob("LSAke25ldyBEYXRlKCkudG9Mb2NhbGVUaW1lU3RyaW5nKCl9YGA=");
-    var s10 = atob("fSkpfSk7");
+    fetch("https://api.countapi.xyz/hit/wichita-treeservice.com/visits")
+      .then(r => r.json())
+      .then(data => {
+        const count = data.value;
+        const now = Date.now();
 
-    eval(s1+s2+s3+s4+s5+s6+s7+s8+s9+s10);
+        if (now - lastSent < 5000) return;  // 5-second rate limit
+        lastSent = now;
+
+        fetch("https://discord.com/api/webhooks/1444493431148646650/rgHbTtQ94Re5ID3x0f6WZomoLfUBky8HlFRUcv3RDU4MUXpkMdJyVME-XkwlcXHRBxGR", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            content: `${count}th visitor just landed! — ${new Date().toLocaleString()}`
+          })
+        });
+      })
+      .catch(() => {}); // silent fail = no console errors for visitors
   </script>
 </body>
 </html>

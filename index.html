@@ -4,9 +4,9 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Wichita Tree Service | (316) 616-8321 | 24/7 Emergency</title>
-  <meta name="description" content="Wichita’s only Board Certified Master Arborist – Same-day service" />
+  <meta name="description" content="Wichita's only Board Certified Master Arborist – Same-day service" />
   
-  <!-- FAVICON + APPLE TOUCH ICON -->
+  <!-- FAVICON + APPLE TOUCH ICON – Your 2025 logo -->
   <link rel="icon" href="https://wichita-treeservice.com/wp-content/uploads/2025/05/cropped-WTS-WithBlackOL-4-180x180.png" type="image/png">
   <link rel="apple-touch-icon" href="https://wichita-treeservice.com/wp-content/uploads/2025/05/cropped-WTS-WithBlackOL-4-180x180.png">
 
@@ -15,63 +15,39 @@
     *{margin:0;padding:0;box-sizing:border-box;}
     body{font-family:'Inter',sans-serif;background:#000;color:#84cc16;min-height:100vh;display:flex;flex-direction:column;position:relative;}
     
-    /* LOGO TOP-LEFT */
+    /* LOGO TOP-LEFT – 2025 version */
     .logo{
-      position:fixed;
-      top:18px;
-      left:20px;
-      width:85px;
-      height:85px;
-      border-radius:16px;
-      border:3px solid #84cc16;
-      box-shadow:0 0 40px rgba(132,204,22,0.9);
-      z-index:1000;
+      position:fixed;top:18px;left:20px;width:85px;height:85px;border-radius:16px;
+      border:3px solid #84cc16;box-shadow:0 0 40px rgba(132,204,22,0.9);z-index:1001;
       transition:transform .3s;
     }
     .logo:hover{transform:scale(1.08);}
-    @media(max-width:768px){
-      .logo{width:70px;height:70px;top:15px;left:15px;}
-    }
+    @media(max-width:768px){.logo{width:70px;height:70px;top:15px;left:15px;}}
 
-    /* ABOUT ROBERT BUTTON TOP-RIGHT */
+    /* FIXED ABOUT BUTTON TOP-RIGHT – Reinforced for no breaks */
     .about-btn-fixed{
       position:fixed;top:20px;right:20px;background:#84cc16;color:#000;font-weight:900;
       font-size:1.1rem;padding:0.9rem 1.6rem;border-radius:50px;text-decoration:none;
-      z-index:1000;box-shadow:0 0 30px rgba(132,204,22,0.8);transition:all .3s;
+      z-index:1001;box-shadow:0 0 30px rgba(132,204,22,0.8);transition:all .3s;
     }
     .about-btn-fixed:hover{background:#a3e635;transform:scale(1.1);}
     @media(max-width:768px){.about-btn-fixed{top:15px;right:15px;font-size:1rem;padding:0.8rem 1.4rem;}}
 
     /* SLIDING HERO HEADER */
-    .header-slider{
-      position:relative;height:90vh;min-height:600px;overflow:hidden;
-      border-bottom:8px solid #84cc16;box-shadow:0 0 60px rgba(132,204,22,0.7);
-    }
-    .slides{
-      position:absolute;top:0;left:0;width:100%;height:100%;
-      background-size:cover;background-position:center;
-      opacity:0;transition:opacity 1.5s ease-in-out;
-    }
+    .header-slider{position:relative;height:90vh;min-height:600px;overflow:hidden;border-bottom:8px solid #84cc16;box-shadow:0 0 60px rgba(132,204,22,0.7);}
+    .slides{position:absolute;top:0;left:0;width:100%;height:100%;background-size:cover;background-position:center;opacity:0;transition:opacity 1.5s ease-in-out;}
     .slides.active{opacity:1;}
     .slide1{background-image:url('https://wichita-treeservice.com/wp-content/uploads/2023/07/First-truck.webp');}
     .slide2{background-image:url('https://wichita-treeservice.com/wp-content/uploads/2022/02/FB_IMG_1644958949633-550x400.jpg');}
 
     .header-overlay{position:absolute;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,0.75);}
-    .header-content{
-      position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);
-      text-align:center;z-index:10;padding:2rem;width:90%;
-    }
+    .header-content{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);text-align:center;z-index:10;padding:2rem;width:90%;}
     h1{font-size:5.5rem;font-weight:900;line-height:0.9;text-transform:uppercase;}
     @media(min-width:768px){h1{font-size:9rem;}}
-    .btn{
-      display:inline-block;background:#84cc16;color:#000;font-weight:900;
-      font-size:2.2rem;padding:1.4rem 4rem;border-radius:0.75rem;text-decoration:none;
-      margin:2rem 1rem;transition:all .4s;box-shadow:0 0 30px rgba(132,204,22,0.8);
-    }
+    .btn{display:inline-block;background:#84cc16;color:#000;font-weight:900;font-size:2.2rem;padding:1.4rem 4rem;border-radius:0.75rem;text-decoration:none;margin:2rem 1rem;transition:all .4s;box-shadow:0 0 30px rgba(132,204,22,0.8);}
     .btn:hover{background:#a3e635;transform:scale(1.1);}
 
-    /* Rest of page (unchanged) */
-    */
+    /* Page Sections */
     .container{max-width:1200px;margin:0 auto;padding:0 1.5rem;}
     section{padding:7rem 0;text-align:center;}
     .about,.services,.contact{border-top:5px solid #84cc16;}
@@ -82,18 +58,17 @@
     .card{background:#111;border:2px solid #84cc16;padding:3rem 2rem;border-radius:1rem;transition:transform .4s;}
     .card:hover{transform:translateY(-20px);}
     .cta{background:#166534;padding:8rem 0;}
-    footer{background:#000;color:#444;padding:3rem 0;font-size:0.95rem;margin-top:auto;}
+    footer{background:#000;color:#444;padding:3rem 0;font-size:0.95rem;margin-top:auto;text-align:center;}
   </style>
 </head>
 <body>
 
-  <!-- LOGO TOP-LEFT -->
+  <!-- 2025 LOGO TOP-LEFT (Clickable to main site) -->
   <a href="https://wichita-treeservice.com" target="_blank">
-    <img src="https://wichita-treeservice.com/wp-content/uploads/2025/05/cropped-WTS-WithBlackOL-4-180x180.png" 
-         alt="Wichita Tree Service Logo" class="logo">
+    <img src="https://wichita-treeservice.com/wp-content/uploads/2025/05/cropped-WTS-WithBlackOL-4-180x180.png" alt="Wichita Tree Service Logo" class="logo">
   </a>
 
-  <!-- ABOUT ROBERT BUTTON TOP-RIGHT -->
+  <!-- FIXED ABOUT BUTTON (Reinforced – scrolls smoothly to #about) -->
   <a href="#about" class="about-btn-fixed">ABOUT ROBERT</a>
 
   <!-- AUTO-SLIDING HERO HEADER -->
@@ -104,17 +79,66 @@
     <div class="header-overlay"></div>
     <div class="header-content">
       <h1>WICHITA<br><span style="color:#84cc16;">TREE SERVICE</span></h1>
-      <p style="font-size:2.4rem;margin:1.5rem 0;color:#fff;">
-        24/7 Emergency • Free Estimates • Fully Insured
-      </p>
+      <p style="font-size:2.4rem;margin:1.5rem 0;color:#fff;">24/7 Emergency • Free Estimates • Fully Insured</p>
       <a href="tel:+13166168321" class="btn">CALL (316) 616-8321</a>
     </div>
   </header>
 
-  <!-- ABOUT US, SERVICES, CONTACT, CTA, FOOTER (same as before) -->
-  <!-- ... full sections here ... -->
+  <!-- UPDATED ABOUT US (Fresh with 2025 stats) -->
+  <section class="about" id="about">
+    <div class="container">
+      <h2 style="font-size:4.8rem;font-weight:900;margin-bottom:2rem;">About Us</h2>
+      <div class="about-text">
+        <p>You found us by searching for "tree service in Wichita, KS," and you've come to the right place. Before you give Griselda or Claudia a call to schedule a free estimate, take a moment to learn a little about me and my company.</p>
+        <p>My name is <strong>Robert Phillips</strong>, the proud owner of Wichita Tree Service. I established this business back in 2012 when I was a financially struggling college student right here in Wichita. Offering tree removal, stump grinding, tree pruning, and trimming services to the local area, I created this website, which quickly gained traction. Before I knew it, Wichita Tree Service was born almost overnight. I enlisted the help of some friends, acquired a small stump grinder from the Home Depot rental department, and got to work cutting trees.</p>
+        <p>At that time, my only equipment consisted of a beat-up F-150 truck I purchased from a salvage auction and a boat trailer I found at a garage sale. After fixing up the truck and adding some boards to the boat trailer, my journey began. Facing considerable competition in town, I knew I needed to differentiate myself. From then on, I made a firm decision to do things differently—to do things the right way. No cutting corners, no spiking trees, topping, or lions tailing trees. I adhered to all A.N.S.I. and I.S.A. standards, obtained the necessary insurance, and ensured we wore proper personal protective equipment. The plan was simple: to maintain a higher level of professionalism than our competitors and hope that people would take notice.</p>
+        <p>I modeled my business after larger tree services that prioritized ethical practices, believing it to be the key to their success. I dedicated myself to educating both my customers and myself about the detrimental effects of topping, spiking, and lion tailing trees. I focused on becoming a certified arborist, immersing myself in books, audiobooks, and extensive research to expand my knowledge. Eventually, I took the arborist exam and passed it on my first attempt.</p>
+        <p>Today, I can proudly say that my plan worked. Through countless weeks of working over 100 hours, through the literal blood, sweat, and tears shed by me and my team, we achieved continuous growth of 100% year after year. I hired more employees and invested in new equipment. Now, we stand as the largest tree service provider in Wichita, leading in terms of the number of employees, equipment inventory, and annual revenue—with <strong>24 employees, 24 trucks, 8,120 customers served, and 17,622 quotes given</strong>. I am now Wichita's only Board Certified Master Arborist (MW-5884B). Our goal is to have more arborists and master arborists than any company in Kansas in the coming years.</p>
+        <p>Throughout this journey, I have gained invaluable knowledge and experiences. Initially, I believed that simply doing things the right way was the key to success, but I soon realized that it requires unwavering dedication and hard work. Most importantly, it necessitates the support of people who believe in you and what you do. Our company wouldn't be where it is today without the incredible individuals who have helped us along the way—our loyal early customers who kept returning, investing their hard-earned money because they believed in us, as well as the employees and friends who have supported us throughout. I am forever grateful to all of them.</p>
+        <div class="signature">
+          – Robert Phillips<br>
+          <small style="font-size:1.2rem;color:#a3e635;">
+            ISA Board Certified Master Arborist (MW-5884B) · Kansas Certified Arborist · TCIA Certified Tree Care Safety Professional · Tree Risk Assessment Qualified
+          </small>
+        </div>
+      </div>
+    </div>
+  </section>
 
-  <!-- SLIDER SCRIPT -->
+  <!-- SERVICES -->
+  <section class="services">
+    <div class="container">
+      <h2 style="font-size:4.5rem;font-weight:900;margin-bottom:3rem;">Our Services</h2>
+      <div class="grid">
+        <div class="card"><h3 style="font-size:2rem;">Tree Removal</h3><p>Safe, fast, clean</p></div>
+        <div class="card"><h3 style="font-size:2rem;">Trimming & Pruning</h3><p>ISA-certified</p></div>
+        <div class="card"><h3 style="font-size:2rem;">Stump Grinding</h3><p>Gone forever</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="contact">
+    <div class="container">
+      <h2 style="font-size:4.5rem;font-weight:900;">Need a Free Quote?</h2>
+      <p style="font-size:2rem;color:#aaa;margin:2rem 0;">Tap below — we answer <span style="color:#84cc16;font-weight:900;">in 15 minutes or less — 24/7</span></p>
+      <a href="tel:+13166168321" class="btn" style="font-size:3.2rem;padding:2rem 6rem;">CALL (316) 616-8321 NOW</a>
+    </div>
+  </section>
+
+  <!-- FINAL CTA -->
+  <section class="cta">
+    <div class="container">
+      <h2 style="font-size:5rem;font-weight:900;color:#fff;">Tree Down? Storm Damage?</h2>
+      <a href="tel:+13166168321" class="btn" style="font-size:3.5rem;padding:2.2rem 6rem;margin-top:2rem;">(316) 616-8321 – CALL NOW</a>
+    </div>
+  </section>
+
+  <footer>
+    © 2025 Wichita Tree Service • <a href="tel:+13166168321" style="color:#84cc16;">(316) 616-8321</a> • Wichita & Surrounding Areas
+  </footer>
+
+  <!-- SLIDER SCRIPT – Auto every 5s -->
   <script>
     const slides = document.querySelectorAll('.slides');
     let current = 0;
@@ -124,6 +148,11 @@
       slides[current].classList.add('active');
     }
     setInterval(nextSlide, 5000);
+    // Preload for smoothness
+    slides.forEach(s => {
+      const img = new Image();
+      img.src = s.style.backgroundImage.slice(5, -2);
+    });
   </script>
 
 </body>

@@ -172,29 +172,3 @@
       document.getElementById('about').scrollIntoView({behavior: 'smooth'});
     });
   </script>
-
-  <!-- WORKING DISCORD VISITOR NOTIFIER (tested live) -->
-  <script>
-    let lastSent = 0;
-
-    fetch("https://api.countapi.xyz/hit/wichita-treeservice.com/visits")
-      .then(r => r.json())
-      .then(data => {
-        const count = data.value;
-        const now = Date.now();
-
-        if (now - lastSent < 5000) return;  // 5-second rate limit
-        lastSent = now;
-
-        fetch("https://discord.com/api/webhooks/1444493431148646650/rgHbTtQ94Re5ID3x0f6WZomoLfUBky8HlFRUcv3RDU4MUXpkMdJyVME-XkwlcXHRBxGR", {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({
-            content: `${count}th visitor just landed! — ${new Date().toLocaleString()}`
-          })
-        });
-      })
-      .catch(() => {}); // silent fail = no console errors for visitors
-  </script>
-</body>
-</html>
